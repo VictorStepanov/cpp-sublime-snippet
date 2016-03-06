@@ -1,44 +1,40 @@
-# C++ Snippets for Sublime Text
+# C++ Competitive Programming Snippets for Sublime Text
 
-This package adds some useful snippets for Sublime Text for C++11. It matches the following style:
+---
 
-```cpp
-if(/* condition */) {
-    /* code */
-}
-```
+#NOTE:
+**This repository is fork** of this: [https://github.com/Rapptz/cpp-sublime-snippet](https://github.com/Rapptz/cpp-sublime-snippet) by [Rapptz](https://github.com/Rapptz).
+
+**Why did I fork it?**
+
+	"I want to make use of the C++ snippet base that Rapptz has created and ceate competitive programming snippets for my needs."
+
+---
 
 ## Installation
-
-### Package Control (recommended)
-
-The easiest way to install the C++ Snippets is by using [Package Control](https://packagecontrol.io/). Installing it [is documented here](https://packagecontrol.io/installation).
-
-- Open Package Control (or hit Ctrl+Shift+P or Cmd+Shift+P)
-- Type _install_ and hit enter
-- Type _C++ Snippets_ and hit enter again
 
 ### Cloning the Repository
 
 You can manually install the package by using Git.
 
-- Navigate to Sublime’s Packages directory
-- Run `git clone https://github.com/Rapptz/cpp-sublime-snippet.git`
+1. Navigate to Sublime’s User Packages directory
 
-To find out where the Packages directory is, you can go to _Preferences_ and _Browse packages…_. This will open the directory in your file explorer.
+On Linux(usualy is found):
 
-### Downloading the Archive
+- for ST2: /home/\<username\>/.config/sublime-text-2/Packages/User/
+- for ST3: /home/\<username\>/.config/sublime-text-3/Packages/User/
 
-If you don’t have Package Control or Git, you can also download the package. However you really should be using Package Control, because the process is simpler.
+On Windows(usualy is found):
+- for ST2: C:\Users\\<username\>\AppData\Roaming\Sublime Text 2\Packages\User
+- for ST3: C:\Users\\<username\>\AppData\Roaming\Sublime Text 3\Packages\User
 
-- Open [https://github.com/Rapptz/cpp-sublime-snippet](https://github.com/Rapptz/cpp-sublime-snippet) in your browser
-- On the right hand side there is a _Download ZIP_ button – click it
-- Go to _Preferences_ and _Browse packages…_ which opens the Packages directory
-- Extract the archive inside the Packages directory
+2. Run`git clone https://github.com/Rapptz/cpp-sublime-snippet.git` into the User Packages directory
+
+
 
 ## Documentation
 
-Documentation can be found in the [reference.md](https://github.com/Rapptz/cpp-sublime-snippet/blob/master/reference.md) file.
+**The out of date** documentation can be found in the [reference.md](https://github.com/VictorStepanov/cpp-sublime-snippet/blob/master/reference.md) file. (I'll try to update as soon as I can)
 
 ## License
 

@@ -1,4 +1,4 @@
-# Documentation
+# Documentation (NOT UP TO DATE)
 
 In this documentation, `$1` represents the first tabbed input, all the way to `$n`. `$0` represents the last place you end up in after you’re done tabbing. If there are two `$n`, e.g. `$1 f($1)`, then that means a caret will be created at each of these locations. If you see `${2:$1}` then that means that you can input part of `$2` first, in this case `$1`, and then tab over to the whole expression, which in this case is `$2`.
 
