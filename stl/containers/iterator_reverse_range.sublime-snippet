@@ -1,0 +1,8 @@
+<snippet>
+	<description>iterator reverse range</description>
+	<content><![CDATA[
+${1:container}.rbegin(), ${1:container}.rend()
+]]></content>
+	<tabTrigger>iter.rev.range</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

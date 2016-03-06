@@ -1,0 +1,8 @@
+<snippet>
+	<description>std::reverse(…)</description>
+	<content><![CDATA[
+std::reverse(${1:container itrator});
+]]></content>
+	<tabTrigger>reverse</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

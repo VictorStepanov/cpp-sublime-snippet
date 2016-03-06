@@ -1,0 +1,8 @@
+<snippet>
+	<description>clear container</description>
+	<content><![CDATA[
+.clear();
+]]></content>
+	<tabTrigger>.clear</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

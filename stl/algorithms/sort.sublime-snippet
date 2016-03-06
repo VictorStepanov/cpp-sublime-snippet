@@ -1,0 +1,8 @@
+<snippet>
+	<description>std::sort(…)</description>
+	<content><![CDATA[
+std::sort(${1:container itrator});
+]]></content>
+	<tabTrigger>sort</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

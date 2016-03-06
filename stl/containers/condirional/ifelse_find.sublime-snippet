@@ -1,0 +1,12 @@
+<snippet>
+	<description>if(find)else</description>
+	<content><![CDATA[
+if(${1:container}.find(${2:what}) != ${1:container}.end()) {
+	${0:/* code for found */}
+} else {
+	/* code for not found */
+}
+]]></content>
+	<tabTrigger>ifelse_find</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

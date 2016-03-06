@@ -1,0 +1,8 @@
+<snippet>
+	<description>container find</description>
+	<content><![CDATA[
+.find(${1:what})
+]]></content>
+	<tabTrigger>.find</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>
