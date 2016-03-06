@@ -1,0 +1,215 @@
+<snippet>
+	<content><![CDATA[
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cctype>
+#include <cerrno>
+#include <cfloat>
+#include <ciso646>
+#include <climits>
+#include <clocale>
+#include <cmath>
+#include <complex>
+#include <csetjmp>
+#include <csignal>
+#include <cstdarg>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <deque>
+#include <exception>
+#include <fstream>
+#include <functional>
+#include <iomanip>
+#include <ios>
+#include <iosfwd>
+#include <iostream>
+#include <istream>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <locale>
+#include <map>
+#include <memory>
+#include <new>
+#include <numeric>
+#include <ostream>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <stdexcept>
+#include <streambuf>
+#include <string>
+#include <typeinfo>
+#include <utility>
+#include <valarray>
+#include <vector>
+
+using namespace std;
+
+const long double PI = 3.14159265358979323846264338327950288419716939937510L;
+const unsigned int MOD = 1000000007;
+
+typedef unsigned long long int  uint64;
+typedef long long int int64;
+typedef unsigned long int uint32;
+typedef long int int32;
+
+class ${1:class_name} {
+	public:
+	${2:return_value_type} ${3:method_name}(${4:method_params}) {
+		${2:return_value_type} ans;
+		
+		return ans;
+	}
+};
+
+// ----- cut here -----
+
+
+const std::string input_file_name("input.txt");
+const std::string test_case_delimiter("-- end of TC --");
+
+class Tester {
+public:
+	Tester() {
+		load_test_case();
+	}
+	
+	void run_test() {
+		print_avalible_test_cases();
+
+		while(true) {
+			if (!get_instructions()) { break; }
+		}
+	}
+
+private:
+	inline void load_test_case() {
+		std::ifstream f(name.c_str());
+		
+		if (f.good()) {
+			std::string line;
+			std::vector<std::string> test_case;
+
+			while (std::getline(file, line)) {
+				if (line.find(test_case_delimiter) != std::string::npos) {
+					m_testCases.pushback( std::move(test_case) );
+					continue;
+				}
+				test_case.pushback(line);
+			}
+		}
+		f.close();
+	}
+
+	void print_avalible_test_cases() {
+		if (m_testCases.size()) {
+			std::cout << "These are the test cases that are available:\n";
+
+			unsigned int tcNum = 1;
+			for (auto test_case_params : m_testCases) {
+				std::cout << "\tTC#" << tcNum << "\n";
+				tcNum++;
+				for (auto test_case_param : test_case_params) {
+					std::cout << "\t\t" << test_case_param << "\n";
+				}
+				std::cout << "\n";
+			}
+		} else {
+			std::cout << "There are no test cases available."
+		}
+	}
+
+	enum TesterInstructions {
+		RUN_ALL_TC,
+		ADD_NEW_TC
+	};
+	bool get_instructions() {
+		std::cout << "Menu:\n";
+
+		unsigned int instructionsNum = 0;
+		std::cout << instructionsNum << ". Run all the TCs\n";
+		instructionsNum++;
+		std::cout << instructionsNum << ". Add new TC\n";
+		instructionsNum++;
+		std::cout << instructionsNum << ". Exit\n";
+
+		unsigned int userInput;
+		std::cin >> userInput;
+		switch (userInput) {
+		case (unsigned int)RUN_ALL_TC:
+			run_all_tcs();
+			return true;
+			break;
+		case (unsigned int)ADD_NEW_TC:
+			add_new_tc();
+			return true;
+			break;
+		default:
+			return false;
+			break;
+		};
+	}
+
+	void add_new_tc()
+	{
+		std::string shortTestCaseDelimiter("--");
+		std::string userInput;
+		std::vector<std::string> test_case_params;
+
+		std::ofstream outfile;
+		outfile.open(input_file_name, std::ios_base::app);
+
+		std::cin >> userInput;
+		while (userInput.find(shortTestCaseDelimiter) == std::string::npos) {
+			std::cout << "enter '--' to stop\n";
+			outfile << userInput << "\n";
+			test_case_params.push_back(userInput);
+			std::cin >> userInput;
+		}
+		outfile << test_case_delimiter << "\n";
+		outfile.close();
+		m_testCases.push_back(test_case_params);
+
+		check_class_under_test_with_params(test_case_params);
+	}
+
+	void run_all_tcs()
+	{
+		unsigned int tcNum = 1;
+		for (auto test_case_params : m_testCases) {
+			std::cout << "\tTC#" << tcNum << "\n";
+			tcNum++;
+			check_class_under_test_with_params(test_case_params);
+			std::cout << "\n";
+		}
+	}
+
+	void check_class_under_test_with_params(const std::vector<std::string>& test_case_params) {
+		${1:class_name} classUnderTest;
+
+		// std::string to params
+		${4:method_params}
+
+		std::cout << "out put: '" << classUnderTest.${3:method_name}(${4:method_params}) << "'\n";
+	}
+
+	std::vector<std::vector<std::string>> m_testCases;
+};
+
+int main()
+{
+	Tester().run_test();
+	return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>topcoder</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
