@@ -1,0 +1,19 @@
+<snippet>
+	<description>compare class</description>
+	<content><![CDATA[
+class Compare
+{
+public:
+	bool operator() (${1:this} a, ${1:this} b)
+	{
+		if(a < b) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+};
+]]></content>
+	<tabTrigger>compare_op</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

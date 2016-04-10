@@ -1,0 +1,8 @@
+<snippet>
+	<description>output string stream</description>
+	<content><![CDATA[
+std::ostringstream oss;
+]]></content>
+	<tabTrigger>output.str</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

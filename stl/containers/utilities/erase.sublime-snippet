@@ -1,0 +1,8 @@
+<snippet>
+	<description>erase element</description>
+	<content><![CDATA[
+.erase(${1:this});
+]]></content>
+	<tabTrigger>.erase</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

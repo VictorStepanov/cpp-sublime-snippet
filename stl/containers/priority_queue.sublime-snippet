@@ -1,0 +1,8 @@
+<snippet>
+	<description>priority_queue</description>
+	<content><![CDATA[
+std::priority_queue<${1:type}, std::vector<${1:type}>, ${3:cmp}> pq;
+]]></content>
+	<tabTrigger>priority_queue</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>

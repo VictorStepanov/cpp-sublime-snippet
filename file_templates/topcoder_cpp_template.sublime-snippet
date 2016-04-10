@@ -90,18 +90,18 @@ public:
 
 private:
 	inline void load_test_case() {
-		std::ifstream f(name.c_str());
+		std::ifstream f(input_file_name.c_str());
 		
 		if (f.good()) {
 			std::string line;
 			std::vector<std::string> test_case;
 
-			while (std::getline(file, line)) {
+			while (std::getline(f, line)) {
 				if (line.find(test_case_delimiter) != std::string::npos) {
-					m_testCases.pushback( std::move(test_case) );
+					m_testCases.push_back( std::move(test_case) );
 					continue;
 				}
-				test_case.pushback(line);
+				test_case.push_back(line);
 			}
 		}
 		f.close();
@@ -121,7 +121,7 @@ private:
 				std::cout << "\n";
 			}
 		} else {
-			std::cout << "There are no test cases available."
+			std::cout << "There are no test cases available.";
 		}
 	}
 
@@ -194,7 +194,9 @@ private:
 		${1:class_name} classUnderTest;
 
 		// std::string to params
+		std::istringstream ss(test_case_params[0]);
 		${4:method_params}
+		ss >> <param name>;
 
 		std::cout << "out put: '" << classUnderTest.${3:method_name}(${4:method_params}) << "'\n";
 	}

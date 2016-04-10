@@ -1,8 +1,8 @@
 <snippet>
 	<description>push_back(…)</description>
 	<content><![CDATA[
-.push_back(${1:value});
+push_back(${1:value});
 ]]></content>
-	<tabTrigger>.push_back</tabTrigger>
+	<tabTrigger>push_back</tabTrigger>
 	<scope>source.c++</scope>
 </snippet>

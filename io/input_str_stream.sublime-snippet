@@ -1,0 +1,8 @@
+<snippet>
+	<description>input string stream</description>
+	<content><![CDATA[
+std::istringstream iss(${1:str});
+]]></content>
+	<tabTrigger>input.str</tabTrigger>
+	<scope>source.c++</scope>
+</snippet>
